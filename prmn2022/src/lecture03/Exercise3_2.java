@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Exercise3_2 {
     public static void main(String[] args) {
-    main();
+        main();
     }
     static void main(){
         Scanner input = new Scanner(System.in);
