@@ -11,16 +11,16 @@ public class Sosuu {
     ArrayList<Integer> calc ( int number ) {
         ArrayList<Integer> sosuu = new ArrayList<>();
         sosuu.add( 2 );
-        for( int i = 3; i <= number; i += 2 ) {
+        for( int i = 3; i <= number; i += 2 ) { //調べる数を奇数に限定する
             int k = 0;
-            for(int j = 3; j <= Math.sqrt ( i ); j += 2 ) {
+            for(int j = 3; j <= Math.sqrt ( i ); j += 2 ) { //2以降の素数はすべて奇数であるため、割る数を奇数に限定する
                 if( i % j == 0 ) {
                     k = 1;
-                    break;
+                    break; //一つでも割り切れる数字があれば合成数なので処理を打ち切る
                 }
             }
             if ( k == 0 ) {
-                sosuu.add( i );
+                sosuu.add( i ); //k == 0のとき探索できるすべての数で割り切れないためiは素数である よってsosuu配列に追加する
             }
         }
         return (sosuu);
@@ -29,7 +29,7 @@ public class Sosuu {
     void print ( ArrayList<Integer> sosuu ) {
         for (int s = 0; s < sosuu.size(); s++ ) {
             System.out.print( sosuu );
-            if ( s != sosuu.size() - 1 ){
+            if ( s != sosuu.size() - 1 ){ //最後以外に区切りの","を挿入する
                 System.out.print( "," );
             }
         }
