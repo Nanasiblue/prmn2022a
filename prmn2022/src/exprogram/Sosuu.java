@@ -28,7 +28,7 @@ public class Sosuu {
 
     void print ( ArrayList<Integer> sosuu ) {
         for (int s = 0; s < sosuu.size(); s++ ) {
-            System.out.print( sosuu );
+            System.out.print( sosuu.get( s ) );
             if ( s != sosuu.size() - 1 ){ //最後以外に区切りの","を挿入する
                 System.out.print( "," );
             }
