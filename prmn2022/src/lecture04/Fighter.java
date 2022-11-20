@@ -1,46 +1,36 @@
 package lecture04;
-import java.util.Scanner;
 
 public class Fighter {
     int hitPoint;
     int power;
     String name;
 
-    Fighter( int power, String name ) {
+    Fighter(int hitPoint, int power, String name) {
         this.hitPoint = hitPoint;
         this.power = power;
         this.name = name;
     }
 
-    void attack( int hitPoint) {
+    public void attack( Fighter enemy ) {
         hitPoint = hitPoint - power;
-        System.out.println( name + " は " + name + " に " + power + " ダメージを与えた。" );
+        System.out.println( name + " は " + enemy.name + " に " + power + " ダメージを与えた。" );
     }
 
-    int getHitpoint( ) {
-        if ( hitPoint >= 0 ){
-            System.out.println( name + "　の残りHP　: " + hitPoint );//HP>0ならそのまま表示
-        }
-        else System.out.println( name + "　の残りHP　: " + 0 );//HP<0なら0で表示
-
-        return hitpoint;
+    public int getHitpoint() {
+        return hitPoint;
     }
 
-    void setHitpoint ( int hitpoint ) {
-        Scanner input = new Scanner( System.in );
-        System.out.println( "HPを入力 : " );
-        this.hitPoint = input.nextInt();//HPを入力
+    public void setHitPoint(int hitPoint) {
+        this.hitPoint = hitPoint;
     }
 
-    boolean isAlive( ) {
+    public boolean isAlive() {
         boolean b;
-        b = ( hitPoint > 0 );//HP>0ならtrue
+        b = (hitPoint > 0);//HP>0ならtrue
         return b;
-        }
     }
 
-    String getName( ) {
-    if ( boolean b == false ) {
-        String n = Fighter.name;//HP<0の名前の取得
-        }
+    public String getName() {
+        return name;
     }
+}
