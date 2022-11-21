@@ -1,18 +1,18 @@
 package lecture04;
 
 public class Fighter {
-    int hitPoint;
-    int power;
-    String name;
+    private int hitPoint;
+    private int power;
+    private String name;
 
-    Fighter(int hitPoint, int power, String name) {
+    public Fighter(int hitPoint, int power, String name) {
         this.hitPoint = hitPoint;
         this.power = power;
         this.name = name;
     }
 
     public void attack( Fighter enemy ) {
-        hitPoint = hitPoint - power;
+        enemy.hitPoint = enemy.hitPoint - power;
         System.out.println( name + " は " + enemy.name + " に " + power + " ダメージを与えた。" );
     }
 
@@ -26,7 +26,7 @@ public class Fighter {
 
     public boolean isAlive() {
         boolean b;
-        b = (hitPoint > 0);//HP>0ならtrue
+        b = ( hitPoint > 0 );//HP>0ならtrue
         return b;
     }
 
