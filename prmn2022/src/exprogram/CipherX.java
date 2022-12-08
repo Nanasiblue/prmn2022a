@@ -21,7 +21,7 @@ public class CipherX {
         if (a.equals("e")) {            //暗号化
             System.out.print("Key\n>");//シードを固定するため任意の値を入れて固定
             int key = input.nextInt();
-            System.out.print("Text(Japanese)\n>");//日本語ひらがなの入力
+            System.out.print("Text\n>");//平文の入力
             String ptxt = input.next();
             Cipher cipher = new Cipher(ptxt);
             cipher.setPtxt(ptxt);//平文の受け渡し
