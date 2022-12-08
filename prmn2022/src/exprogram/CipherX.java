@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class CipherX {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Encryption -> e, Decryption -> d, Exit -> 0\n>");
+        System.out.print("Encryption -> e, Decryption -> d, Exit -> 0\n> ");
         String a;
         while (true) {
             a = input.next();
@@ -27,7 +27,8 @@ public class CipherX {
             cipher.setPtxt(ptxt);//平文の受け渡し
             ArrayList<Integer> Enc;
             Enc = cipher.Encryption(key, ptxt);//処理結果の受け渡し
-            System.out.println(Enc);//表示
+            View view = new View(Enc);
+            view.view(Enc);//表示
         }
 
         if (a.equals("d")) {            //復号
@@ -39,7 +40,8 @@ public class CipherX {
             cipher.setPtxt(ctxt);//暗号文の受け渡し
             ArrayList<Character> Dec;
             Dec = cipher.Decryption(key, ctxt);//処理結果の受け渡し
-            System.out.println(Dec);//表示
+            ViewD viewD = new ViewD(Dec);
+            viewD.view(Dec); //表示
         }
 
         if (a.equals("0")) {
