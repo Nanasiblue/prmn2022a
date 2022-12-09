@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class CipherX {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Encryption -> e, Decryption -> d, Exit -> 0\n> ");
+        System.out.print("Encryption -> e, Decryption -> d, Exit -> 0\n>");
         String a;
         while (true) {
             a = input.next();
