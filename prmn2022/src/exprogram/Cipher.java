@@ -6,7 +6,7 @@ public class Cipher {
     private String ptxt;
     private String data = "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん" +
             "がぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽぁぃぅぇぉっゃゅょabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!?" +
-            "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン[]{}1234567890";
+            "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン[]{}-ー1234567890、。";
 
     Cipher( String ptxt ) {
         this.ptxt = ptxt;
@@ -41,7 +41,7 @@ public class Cipher {
         return Enc;
     }
 
-    public ArrayList<Character> Decryption( int seed, String ctxt) {
+    public ArrayList<Character> Decryption( int seed, String ctxt ) {
         ArrayList<Character> Dec = new ArrayList<>();
         int [] data = new int[1000000];//文字に置き換えるための数字の生成（復号なので対応表の作成）
         for ( int i = 0; i < 1000000; i++ ) {

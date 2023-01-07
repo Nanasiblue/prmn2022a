@@ -15,7 +15,6 @@ public class CipherX {
             else {
                 System.out.println("Error, enter again.");
                 System.out.print("Encryption -> e, Decryption -> d, Exit -> 0\n>");//入力が違う時は再入力
-                a = input.next();
             }
         }
         if (a.equals("e")) {            //暗号化
