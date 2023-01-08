@@ -122,7 +122,7 @@ public class Analyze {
             }
         }
 
-        HashMap<int, List<Integer>> map = new HashMap<>();
+        HashMap<Integer, List<Integer>> map = new HashMap<>();
 
         /**
          * map の key の List に value を追加して map を返す
@@ -133,7 +133,7 @@ public class Analyze {
          * @param <V> 値の型
          * @return 値を追加したMap
          */
-        public static <Integer, Integer> HashMap<Integer, List<Integer>> add(HashMap<Integer, List<Integer>> map, int key, int value) {
+        public static <Integer, Integer> HashMap<Integer, List<Integer>> add(HashMap<Integer, List<Integer>> map, Integer key, Integer value) {
             List<Integer> list = map.get(key);
             if (Objects.isNull(list)) {
                 list = new ArrayList<>();
