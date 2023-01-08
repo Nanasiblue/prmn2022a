@@ -3,6 +3,7 @@ package exprogram;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
 
 public class Analyze {
     public static void main(String[] args) {
@@ -121,29 +122,26 @@ public class Analyze {
             }
         }
 
-//        CountIndex countIndex1 = new CountIndex(1);
-//        CountIndex countIndex2 = new CountIndex(2);
-//        CountIndex countIndex3 = new CountIndex(3);
-//        CountIndex countIndex4 = new CountIndex(4);
-//        CountIndex countIndex5 = new CountIndex(5);
-//        CountIndex countIndex6 = new CountIndex(6);
-//        CountIndex countIndex7 = new CountIndex(7);
-//        CountIndex countIndex8 = new CountIndex(8);
-//        CountIndex countIndex9 = new CountIndex(9);
-//        CountIndex countIndex10 = new CountIndex(10);
-//        CountIndex countIndex11 = new CountIndex(11);
-//        CountIndex countIndex12 = new CountIndex(12);
-//        CountIndex countIndex1 = new CountIndex(13);
-//        CountIndex countIndex1 = new CountIndex(14);
-//        CountIndex countIndex1 = new CountIndex(15);
-//        CountIndex countIndex1 = new CountIndex(16);
-//        CountIndex countIndex1 = new CountIndex(17);
-//        CountIndex countIndex1 = new CountIndex(18);
+        HashMap<int, List<Integer>> map = new HashMap<>();
 
-//        for (int i = 0; i < Max1; i++) {
-//            if (count1[i] == 1) {
-//            }
-//        }
+        /**
+         * map の key の List に value を追加して map を返す
+         * @param map 追加対象のMap
+         * @param key 追加するキー
+         * @param value 追加する値
+         * @param <K> キーの型
+         * @param <V> 値の型
+         * @return 値を追加したMap
+         */
+        public static <Integer, Integer> HashMap<Integer, List<Integer>> add(HashMap<Integer, List<Integer>> map, int key, int value) {
+            List<Integer> list = map.get(key);
+            if (Objects.isNull(list)) {
+                list = new ArrayList<>();
+            }
+            list.add(value);
+            map.put(key, list);
+            return map;
+        }
 
         Arrays.sort(count1);
         Arrays.sort(count3);
@@ -166,5 +164,6 @@ public class Analyze {
                     System.out.print(",");
                 }
             }
+
         }
     }
