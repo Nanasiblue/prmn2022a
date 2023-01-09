@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Analyze {
     public static void main(String[] args) {
@@ -133,7 +135,8 @@ public class Analyze {
          * @param <V> 値の型
          * @return 値を追加したMap
          */
-        public static <Integer, Integer> HashMap<Integer, List<Integer>> add(HashMap<Integer, List<Integer>> map, Integer key, Integer value) {
+        public static <Integer, Integer> HashMap<Integer,
+                List<Integer>> add(HashMap<Integer, List<Integer>> map, Integer key, Integer value) {
             List<Integer> list = map.get(key);
             if (Objects.isNull(list)) {
                 list = new ArrayList<>();
