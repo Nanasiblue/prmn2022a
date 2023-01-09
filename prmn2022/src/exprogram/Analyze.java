@@ -1,11 +1,6 @@
 package exprogram;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Analyze {
     public static void main(String[] args) {
@@ -125,6 +120,8 @@ public class Analyze {
         }
 
         HashMap<Integer, List<Integer>> map = new HashMap<>();
+        Integer key;
+        Integer value;
 
         /**
          * map の key の List に value を追加して map を返す
@@ -135,8 +132,7 @@ public class Analyze {
          * @param <V> 値の型
          * @return 値を追加したMap
          */
-        public static <Integer, Integer> HashMap<Integer,
-                List<Integer>> add(HashMap<Integer, List<Integer>> map, Integer key, Integer value) {
+        public HashMap<Integer, List<Integer>> add(HashMap<Integer, List<Integer>> map, key,  value) {
             List<Integer> list = map.get(key);
             if (Objects.isNull(list)) {
                 list = new ArrayList<>();
